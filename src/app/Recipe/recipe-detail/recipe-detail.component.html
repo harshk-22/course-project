@@ -1,0 +1,46 @@
+<p>recipe-detail works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="recipe.ImagePath" alt="">
+    </div>
+    <div class="row">   
+        <div class="col-xs-12">
+<h1>{{recipe.name}}</h1>
+        </div>
+    </div>
+    <div class="row">   
+        <div class="col-xs-12">
+          <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle">
+               Manage Recipe <span class="cartel"></span>
+              </button>
+              <ul class="dropdown-menu">
+                  <li><a href="">shopping recipe</a></li>
+                  <li><a href="">edit irecipe</a></li>
+                  <li><a href="">delete irecipe</a></li>
+              </ul>
+          </div>  
+        </div>
+    </div>
+   
+
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{recipe.description}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+      <ul class="lis-group">
+          <li class="list-group-item" *ngFor="let i of recipe.ingrident">
+                 {{i.name}}-{{i.amount}}
+          </li>
+      </ul>
+    </div>
+</div>
+<div>   
+              <li><a href="#" (click)="onAddShoppingClick()">shopping recipe</a></li>
+              <li><a href="#"  (click)="onEditShoppingClick()">edit recipe</a></li>
+              <li><a href="#" (click)="onDeleteShoppingClick()">delete recipe</a></li>
+</div>
